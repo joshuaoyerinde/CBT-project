@@ -1,0 +1,25 @@
+.add-course{
+  /* margin-top: 470px; */
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.course-btn{
+    background-color: inherit;
+    border: none;
+    border-radius: 40px;
+    color: #FF4081;
+    outline: none;
+    transition: 1.5s;
+    /* opacity: 0px; */
+}
+.course-btn:hover {
+    background:linear-gradient(to bottom,#181c24,#FF4081);
+    /* opacity: 1px; */
+    color: white;
+}
+.overflow{
+  overflow:auto;
+  height: 75vh;
+}
+

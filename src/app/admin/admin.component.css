@@ -1,0 +1,46 @@
+.border-left-primary {
+  border-left: 0.25rem solid  darkslateblue !important;
+}
+.border-left-warning {
+  border-left: 0.25rem solid #FF4081 !important;
+}
+.border-left-success {
+  border-left: 0.25rem solid green !important;
+}
+.border-bottom-warning {
+  border-bottom: 0.25rem solid rgb(236, 170, 48) !important;
+}
+.border-bottom-primary {
+  border-bottom: 0.25rem solid darkblue !important;
+}
+.text-deepblue{
+  color: darkslateblue;
+}
+.text-xs {
+  font-size: 12px;
+}
+.text-icon{
+  color: darkslateblue;
+  font-size: 30px;
+}
+.text-icon:hover{
+  color: #FF4081;
+}
+.tol-1{
+  color: #FF4081;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.tol-2{
+  color: darkslateblue;
+}
+.text-icon-1{
+  color: #FF4081;
+  font-size: 30px;
+}
+.text-icon-1:hover{
+  color: darkslateblue;
+  cursor: pointer;
+}
+/* body{
+  color: rgb(rgba(0, 0, 0, 0.397));
+} */

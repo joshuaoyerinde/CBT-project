@@ -1,0 +1,26 @@
+.add-course{
+  /* margin-top: 340px;
+  position: sticky; */
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  /* float: left !important; */
+  /* margin-left: 20px; */
+  /* float: left; */
+}
+.text-xs {
+  font-size: 0.8rem;
+}
+.text-xbody{
+  font-size: 0.9rem;
+}
+.overflow{
+  overflow:auto;
+  height: 70vh;
+}
+.qtable{
+  white-space: nowrap;
+  width:250px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}

@@ -1,0 +1,52 @@
+
+<!-- <div class="row ml-4 mt-3 justify-content-between">
+  <div class="col-md-4 col-xs-4">
+      <div class="shadow-sm">
+        <div class="card-body mx-auto">
+          <h3 class="card-text">Select your Subject</h3>
+          <div class="clearfix" *ngFor="let q of quest">
+            <div><span class="mt-3">{{q.course}}<button type="button" [routerLink]="['/studentProfile/display-question/' + q.course_id]" routerLinkActive="router-link-active"  class="btn btn-light float-right shadow-sm">
+              Proceed</button></span>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div> -->
+<div class="container mt-5">
+  <h6 class="">Select Your Course</h6>
+  <div class="line"></div>
+  <div class="row justify-content-center mt-3">
+      <div class="col-md-10">
+        <div class="shadow-md  subject-body bg-default">
+          <div class="card-body border-radius">
+            <div class="row">
+                <div  class=" col-12 col-md-4" *ngFor="let q of quest let i=index">
+                  <div class="shadow-sm mt-2 border-left-success" style="background: #FAFAFA;">
+                  <div class="card-body">
+                    <div class="text-course">{{q.course}}</div>
+                    <div>{{q.tutorsname}}</div>
+                    <div *ngIf="this.checksubject.value == true">done</div>
+                    <!-- <div>ready</div> -->
+                    <div>
+                      <span  class="mx-auto mt-3">
+                        <button (click)='questDiaplayFunction()' mat-raised-button color="primary" class="btn btn-light float-right mt-n4" type="button" [routerLink]="['/studentProfile/display-question/' + q.course_id]" routerLinkActive="router-link-active" >
+                          proceed {{i}}
+                        </button>
+                            <form [formGroup]="checksubject">
+                               <section class="example-section">
+                                  <mat-checkbox  [value]='q.tutorsname' formControlName="u{{q.course_id}}" class="example-margin"  (change)='cc()'>Checked</mat-checkbox>
+                                </section>
+                              </form>
+                    </span>
+                  </div>
+                  </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  </div>
+</div>
+<!-- <button [hidden]="clicked" (click)="clicked ? false : 'helloworld'">Hello</button> -->

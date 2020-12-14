@@ -1,0 +1,21 @@
+.text-course{
+  font-size: 20px; font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(90, 87, 87);
+}
+.border-left-success {
+  border-left: 0.25rem solid darkblue !important;
+  border-left-style: dotted !important;
+}
+.border-radius{
+  border-radius: 0px 30px 0px 30px;
+}
+.subject-body{
+  overflow:auto;
+  height: 60vh;
+}
+.line{
+  width: 55px;
+  border-bottom: solid darkblue !important;
+  /* border-bottom-style: dotted !important; */
+  /* justify-content: center !important; */
+}

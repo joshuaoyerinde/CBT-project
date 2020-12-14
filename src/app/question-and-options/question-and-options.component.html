@@ -1,0 +1,61 @@
+<!-- <div class="container mt-4">
+  <form class="example-form">
+    <mat-form-field class="">
+      <mat-label>Favorite food</mat-label>
+      <input matInput placeholder="Ex. Pizza" value="Sushi">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Leave a comment</mat-label>
+      <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+    </mat-form-field>
+  </form>
+</div> -->
+<mat-form-field appearance="legacy" class="mt-3  ml-4">
+  <mat-label>search</mat-label>
+  <input autocomplete="off" [(ngModel)]="filterQuest" matInput placeholder="filter.......">
+</mat-form-field>
+<div class="container mt-3">
+  <div class="shadow-sm justify-content-center">
+    <div class="overflow">
+      <table class="container table table-collapse table-borderless table-hover table-responsive-md">
+        <!-- <th>name</th> -->
+        <thead class="thead shadow-md card-heder text-xs font-weight-normal">
+          <th>_#</th>
+          <th>CourseName</th>
+          <th>Qestion</th>
+          <th>Opt1</th>
+          <th>Opt2</th>
+          <th>Opt3</th>
+          <th>Opt4</th>
+          <th>Action</th>
+          <th>Edit</th>
+        </thead>
+        <tbody class="tbody bg-white text-xbody td-test">
+          <tr *ngFor="let i of getQustion | pipQuestion:filterQuest let a=index" class="card-body bg-white shadow-sm animate__animated animate__fadeInUp">
+            <td>{{a+1}}</td>
+            <td style="display: none;">{{i.questions_id}}</td>
+           <td>{{i.course}}</td>
+           <td><div class="qtable">{{i.question}}</div></td>
+           <td>{{i.option_1}}</td>
+           <td>{{i.option_2}}</td>
+           <td>{{i.option_3}}</td>
+           <td>{{i.option_4}}</td>
+            <td><button mat-mini-fab><mat-icon aria-hidden="false" aria-label="Example home icon" color="white" (click)="removeQest(i)">delete_forever</mat-icon></button>
+            </td>
+            <td><button mat-mini-fab><mat-icon aria-hidden="false" aria-label="Example home icon" color="white" (click)="editQuestions(i)">launch</mat-icon></button>
+            </td>
+          </tr>
+        </tbody>
+    </table>
+    </div>
+  </div>
+</div>
+
+<div class="float-right add-course mr-4">
+  <button mat-fab (click)="addQuestion()"  color="primary" aria-label="Example icon button with a delete icon">
+    <mat-icon class="primary">add_circle</mat-icon>
+  </button>
+  <!-- <div class=""></div> -->
+</div>
+

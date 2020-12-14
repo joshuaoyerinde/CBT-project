@@ -1,0 +1,32 @@
+<!-- <p>register-student-list works!</p>
+ -->
+ <!-- <input matInput placeholder="enter course...." > -->
+ <mat-form-field appearance="legacy" class="mt-4 ml-4">
+    <mat-label>search</mat-label>
+    <input autocomplete="off" [(ngModel)]="filterText" matInput placeholder="filter......." class="animate__animated animate__bounceUp">
+  </mat-form-field>
+<div class="container mt-4">
+  <div class="shadow-sm justify-content-center">
+    <div class="overflow">
+      <table class=" container table table-collapse table-borderless table-hover table-responsive-md">
+        <!-- <th>name</th> -->
+        <thead class="thead shadow-md card-heder">
+          <th>FirstName</th>
+          <th>secondName</th>
+          <th>Email</th>
+          <th>password</th>
+          <th>Action</th>
+        </thead>
+        <tbody class="tbody bg-white td-test">
+          <tr *ngFor="let a of registerStud | filterstudent:filterText" class="card-body shadow-sm animate__animated animate__slower animate__shakeY">
+            <td>{{a.firstname}}</td>
+            <td>{{a.lastname}}</td>
+            <td>{{a.email}}</td>
+            <td>{{a.password}}</td>
+            <td><button (click)="deleteStudent(a.id)" mat-mini-fab><mat-icon aria-hidden="false" aria-label="Example home icon" color="white">delete_forever</mat-icon></button></td>
+          </tr>
+        </tbody>
+    </table>
+    </div>
+  </div>
+</div>

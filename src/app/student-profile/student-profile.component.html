@@ -1,0 +1,89 @@
+
+<!-- <nav class="navbar navbar-expand-md shadow-sm"> -->
+  <div id="main">
+    <div class="container">
+      <ul class="nav mt-2 shadow-sm p-1 col-md-12 mr-1">
+        <button class="nav-link active navbar-toggler bg-light  ml-3 btn-toggle  justify-content-" data-target="#collapsibleNavbar" data-toggle="collapse">
+          <!-- <span class="navbar-toggler-icon"></span> -->
+          <i class="fa fa-bars" style="color: #040b14"></i>
+        </button>
+        <li class="nav-item">
+          <i class="fa fa-home ml-4 nav-icon"></i>
+        </li>
+        <li class="nav-item">
+          <i class="fa fa-book ml-4 nav-icon"></i>
+        </li>
+        <li class="nav-item ml-4">
+          <i class="fa fa-user nav-icon"></i>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+<!-- </nav> -->
+
+<div class="collapse  d-lg-block" id="collapsibleNavbar">
+  <nav id="header" class="navbar navbar-light" color="primary">
+    <button class="navbar-toggler bg-light float-left mt-2 ml-3 btn-toggle d-lg-none d-block fixed-top" data-target="#collapsibleNavbar" data-toggle="collapse">
+      <!-- <span class="navbar-toggler-icon"></span> -->
+      <i class="fa fa-close" style="color:white"></i>
+    </button>
+    <div class="d-flex flex-column">
+      <div class="profile">
+        <div class="img-profile ml-5">
+          <img src="assets/pic/jos.jpg" alt="" class="img-fluid rounded-circle">
+        </div>
+        <h1 class="text-light"><a href="index.html" class="text-white ml-5">Mr Josh</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="#" class="ml-2"><i class="fa fa-book"></i> </a>
+          <a href="#" class="ml-2"> <i class="fa fa-user"></i></a>
+          <a href="#" class="ml-3"><i class="fa fa-home"></i></a>
+          <a href="#" class="ml-3"><i class="fa fa-skype"></i></a>
+          <!-- <a href="#" class="ml-3"><i class="fa fa-linkedin"></i></a> -->
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <ul class="navbar-nav ml-4">
+          <li class="active nav-item">
+            <a href="#" class="nav-link text-white"  routerLink="/studentProfile/student-darshboard">
+              <i class="fa fa-home"></i> <span  class="ml-2">Darshboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-white" routerLink="/studentProfile/student-darshboard">
+              <i class="fa fa-user"></i> <span class="ml-2">Profile</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#"class="nav-link text-white" routerLink="/studentProfile/studentexampanel" >
+              <i class="fa fa-book"></i> <span class="ml-2">Examination</span>
+            </a>
+        </li>
+          <li class="nav-item">
+            <a  href="" class="nav-link text-white">
+              <i class="fa fa-book"></i><span class="ml-2"> Portfolio</span>
+            </a>
+          </li>
+          <!-- <li class="nav-item">
+            <a href="#services"class="nav-link text-white">
+              <i class="fa fa-server"></i> <span class="ml-2">Services</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact"class="nav-link text-white">
+              <i class="fa fa-envelope"></i><span class="ml-2">Contact</span>
+            </a>
+          </li> -->
+        </ul>
+      </nav><!-- .nav-menu -->
+      <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button> -->
+    </div>
+</nav>
+</div>
+ <main id="main" class="">
+  <div class="container">
+    <router-outlet></router-outlet>
+
+  </div>
+</main>

@@ -1,0 +1,34 @@
+<div class="">
+  <h2 *ngIf="ifEmptyQuset">No question Yet</h2>
+<!-- <input [hidden]="3>2" type="text"[(ngModel)]="scorep" value="0" name="bind"> -->
+<!-- <h3 *ngIf="binding"></h3> -->
+<button routerLink="/studentProfile/studentexampanel" routerLinkActive="router-link-active" >Back</button>
+<form [formGroup]='optionForm'>
+  <mat-horizontal-stepper  #stepper>
+    <!-- <div style="margin-top: 20px;">7t7fututgyg</div> -->
+    <!-- <h4>{{name}}</h4> -->
+
+    <mat-step *ngFor="let i of displayquestions">
+
+      <h4>{{i.course}}</h4>
+      <!-- <input type="text" id="" [value]='i.course'> -->
+        <!-- <ng-template matStepLabel>{{i.question}}</ng-template> *ngIf='i.answer'-->
+        <h6>{{i.question}}</h6>
+            <mat-radio-group  aria-label="Select an option" formControlName="y{{i.questions_id}}" class="example-radio-group">
+              <mat-radio-button  [value]="i.option_1"><h6>{{i.option_1}}</h6></mat-radio-button>
+              <mat-radio-button  [value]="i.option_2"><h6>{{i.option_2}}</h6></mat-radio-button>
+              <mat-radio-button  [value]="i.option_3"><h6>{{i.option_3}}</h6></mat-radio-button>
+              <mat-radio-button  [value]="i.option_4"><h6>{{i.option_4}}</h6></mat-radio-button>
+              <!-- <mat-radio-button value="2">Option 2</mat-radio-button> -->
+            </mat-radio-group>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </mat-step>
+    </mat-horizontal-stepper>
+  </form>
+  <div *ngIf="stid">
+    <button mat-raised-button *ngIf="savebtn" color="primary"(click)="saveScore()">Submit</button>
+  </div>
+</div>

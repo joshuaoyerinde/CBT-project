@@ -1,0 +1,21 @@
+/* .example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 110%; */
+  /* margin-left: 2px; */
+/* } */
+/* .example-full-width{
+  width: 50%;
+}
+.example-min-width{
+  width: 45%;
+} */
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}

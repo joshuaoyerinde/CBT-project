@@ -1,0 +1,37 @@
+<!-- <p>add-course works!</p> -->
+
+<div class="float-right  add-course mr-4">
+  <button mat-fab (click)="openDialog()"  color="primary" aria-label="Example icon button with a delete icon">
+    <mat-icon class="primary">add_circle</mat-icon>
+  </button>
+</div>
+<div class="container mt-1">
+  <h4 class="mt-3 text-center">COURSENAME & TUTOR'S PAGE</h4>
+  <div class="addcourse-container">
+      <div class="row justify-content-center mx-auto">
+          <div class="col-xl-10 col-lg-12 col-md-9">
+            <div  class="overflow">
+               <div class="card bg-light o-hidden border-0 my-2">
+                <div class="card-body">
+                    <div class="row mx-auto">
+                        <div class="col-lg-4 mt-1 animate__animated animate__slower animate__fadeInRight" *ngFor="let i of displayCourse">
+                          <div class="card o-hidden border-0 shadow-sm">
+                            <div class="card-body">
+                              <div>
+                                <p style="display: none;">{{i.course_id}}</p>
+                                 <div><h6>Tutor's Name: <span>{{i.tutorsname}}</span></h6></div>
+                                  <div class="clearfix"><h6>Courses Name: <span>{{i.course}}</span></h6></div>
+                                  <button type="button" title="delete" class="course-btn mb-0 col-3 float-right" (click)="deleteQuestion(i.course_id)"><i class="fa fa-trash"></i></button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- <h2>hdivifhurhuirhui</h2> -->

@@ -1,0 +1,145 @@
+
+<p class="text-white" >>login works!</p>
+<div align="center" class="container con">
+    <!-- Outer Row -->
+     <div class="row justify-content-center mx-auto">
+
+      <div class="col-xl-10 col-lg-12 col-md-9">
+
+        <div class="card o-hidden border-0 shadow-sm my-5">
+          <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+              <div class="col-lg-6 d-none d-lg-block" id="front-login">
+                <div id="side-log">
+                  <div class="side-log-text">You are Welcome to Examation hall ..
+                    <br>we hope that you've aware of the rules and regulation..
+                    <p class="side-log-text2">
+                      wish you best of luck
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="p-5">
+                  <div class="text-center">
+                    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                  </div>
+                  <form class="user" style="border: none !important;" [formGroup]="profileForm" (ngSubmit)="submitForm()">
+                    <div class="form-group">
+                      <input type="email" required class="form-control form-control-user" formControlName="email" [class.is-invalid]="myEmail.invalid && myEmail.touched" [class.is-valid]="myEmail.valid && myEmail.touched" placeholder="Enter Email Address...">
+                        <span class="text-danger txt-warn" *ngIf="myEmail.invalid && myEmail.touched">
+                          please enter unique email
+                        </span>
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control form-control-user" required formControlName="password" [class.is-invalid]="mypass.invalid && mypass.touched" [class.is-valid]="mypass.valid && mypass.touched" placeholder="Password">
+                      <span class="text-danger txt-warn" *ngIf="mypass.invalid && mypass.touched">
+                        <small class="text-danger txt-warn" *ngIf="mypass.errors.required">please enter your password</small>
+                      </span>
+                      <small class="text-danger txt-warn" *ngIf="message">{{message}}</small>
+                    </div>
+                    <div class="form-group">
+                      <div class="custom-control custom-checkbox small">
+                      <input type="checkbox" class="fa fa-remove custom-control-input" id="customCheck">
+                        <label class="custom-control-label" for="customCheck">Remember Me</label>
+                      </div>
+                    </div>
+                    <button type="submit" [disabled]="profileForm.invalid"  class="btn-user btn-block">
+                      <span  class="fa fa-spinner fa-spin" *ngIf="submitted"></span>
+                      Login
+                    </button>
+                    <hr/>
+                  </form>
+                  <!-- <hr> -->
+                   <div class="text-center">
+                    <a class="small" href="forgot-password.html">Forgot Password?</a>
+                  </div>
+                  <div class="text-center">
+                    <a class="small" routerLink="/signup">Create an Account!</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div align="center" class="container con">
+
+    <div class="row justify-content-center mx-auto">
+
+      <div class="col-xl-10 col-lg-12 col-md-9">
+
+        <div class="card o-hidden border-0 shadow-sm my-5">
+          <div class="card-body p-0"> -->
+            <!-- Nested Row within Card Body -->
+            <!-- <div class="row">
+              <div class="col-lg-6 d-none d-lg-block" id="front-login">
+                <div id="side-log">
+                  <div class="side-log-text">You are Welcome to Examation hall ..
+                    <br>we hope that you've aware of the rules and regulation..
+                    <p class="side-log-text2">
+                      wish you best of luck
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="p-5">
+                  <div class="text-center">
+                    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                  </div>
+                  <form class="user" style="border: none !important;" >
+                    <div class="form-group">
+                      <input type="mail"  required appFormDirective class="form-control form-control-user" name="Email" #email="ngModel" [(ngModel)]="Email" [class.is-invalid]="email.invalid && email.touched" [class.is-valid]="email.valid && email.touched" placeholder="Enter Email Address...">
+                        <span *ngIf="email.invalid && email.touched">
+                            <small class="text-danger" *ngIf="email.errors.requred">email requred</small>
+                            <small class="text-danger" *ngIf="email.errors.formMailInvalid">email requred not personal email</small>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <!-- <label class="fa fa-remove" for=""></label> -->
+                      <!-- <input type="text" required  class="form-control form-control-user" #myphone="ngModel" [(ngModel)]="phone" [class.is-invalid]="myphone.invalid && myphone.touched" [class.is-valid]="myphone.valid && myphone.touched"placeholder="Password">
+                      <span *ngIf="myphone.invalid && myphone.touched">
+                          <small class="text-danger" *ngIf="myphone.errors.required">please enter ya phone number</small>
+                          <small class="tetx-danger" *ngIf="myphone.errors.minlength">phone NUmber must be at least 10 char</small>
+                        </span>
+                    </div> -->
+                    <!-- <div class="form-group">
+                      <div class="custom-control custom-checkbox small">
+                        <input type="checkbox" class="fa fa-remove custom-control-input" id="customCheck">
+                        <label class="custom-control-label" for="customCheck">Remember Me</label>
+                      </div>
+                    </div>
+                    <button type="submit" class=" btn btn-user btn-block">
+                      Login
+                    </button>
+                    <hr>
+                  </form> -->
+
+                  <!-- <hr> -->
+                  <!-- <div class="text-center">
+                    <a class="small" href="forgot-password.html">Forgot Password?</a>
+                  </div>
+                  <div class="text-center">
+                    <a class="small" href="register.html">Create an Account!</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div> -->
+
+
+
+
+  <!-- for template driven -->
+  <!-- </center> -->
+
